@@ -7,13 +7,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBackend.API.Controllers
 {
+    [Route("api/[controller]")]
     public class ProductController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
+        [HttpGet]
         public JsonResult GetProducts()
         {
             return new JsonResult(
